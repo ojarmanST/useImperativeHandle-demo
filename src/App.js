@@ -10,7 +10,14 @@ function App() {
     <div className="App">
       <Counter ref={counterRef} />
       <CustomInput ref={customInputRef} placeholder="type something here" />
-      <button onClick={() => counterRef.current.reset()}>Reset</button>
+      <button
+        onClick={() => {
+          counterRef.current.reset();
+          customInputRef.current.reset();
+        }}
+      >
+        Reset
+      </button>
     </div>
   );
 }
